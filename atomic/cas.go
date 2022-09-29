@@ -14,7 +14,7 @@ import (
 
 var (
 	counter int32
-	wg sync.WaitGroup
+	wg      sync.WaitGroup
 )
 
 func casStart() {
@@ -39,13 +39,13 @@ func incCounter(threadNum int) {
 		// 如果*counter的值等于old, 则将*counter的值换成old+1, 放回true
 		// 如果*counter的值不等于old, 则返回false
 		// 以上两种情况均为原子操作
-		if ok {		
+		if ok {
 			break
 		} else {
 			repeatTimes++
 		}
 	}
-	if repeatTimes == 0{
+	if repeatTimes == 0 {
 		return
 	}
 	fmt.Printf("thread: %d repeats %d times\n", threadNum, repeatTimes)

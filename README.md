@@ -10,3 +10,18 @@
 
 * Redis实现分布式锁(原理+实现)
 * Zookeeper实现分布式锁(原理+实现)
+
+## 3 基本并发原语和原子操作
+
+* Mutex
+* RWMutex
+* WaitGroup
+* Once
+* Pool
+* Context
+* atomic
+
+## 4 Channel
+
+## 5 扩展并发原语
+
