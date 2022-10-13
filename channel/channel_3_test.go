@@ -58,7 +58,6 @@ func (mu *mutex) LockTimeout(duration time.Duration) bool {
 	case <-timer.C:
 		return false
 	case <-mu.ch:
-		<-mu.ch
 		timer.Stop()
 		return true
 	}
